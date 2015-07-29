@@ -1,20 +1,11 @@
-/*	
-
-Métodos
-	- add(Fraction f)
-	- multiply(Fraction f)
-	- div(Fraction f)
-	- toString()
-	- equals(Fraction f)
-*/
 
 public class Fraction{
 
-	// Definir los campos
-	int numerador;
-	int denominador;
+	// Definir los campos , los encapsulamos (private)
+	private int numerador;
+	private int denominador;
 
-	// Definir los constructores
+	// Constructores
 	public Fraction(int n){
 		this.numerador = n;
 		this.denominador = 1;
@@ -22,9 +13,22 @@ public class Fraction{
 
 	public Fraction(int n, int d){
 		this.numerador = n;
-		this.denominador = d;
+		this.denominador = d > 0 ? d : 1 ;
+		/*
+			Utilizamos el operador ternario es lo mismo a tener
+			if( d > 0) {
+				this.denominador = d;
+			} else  {
+				this.denominador = 1;
+			}
+		*/
 	}
 
+	/*  Declaración de metodos. 
+		Getters: Se denomina a todos los metodos que retornan un campo. 
+		Setters: Se denomina a todos los metodos que cambian un campo. 
+
+	*/
 	public int getNum(){
 		return this.numerador;
 	}
@@ -38,7 +42,7 @@ public class Fraction{
 	}
 
 	public void setDen(int d){
-		this.denominador = d;
+		if( d != 0 ) this.denominador = d;
 	}
 
 	public Fraction add(Fraction otra){
@@ -72,22 +76,6 @@ public class Fraction{
 			return true;
 		return false;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 
