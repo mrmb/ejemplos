@@ -3,9 +3,10 @@
 # Asignación de variables
 var_1 <- 10 
 
+# Generar una secuencia de -10 a 10
 x<- seq(from = -10, to = 10, by = 0.01)
 y<- x^2 
-plot(x, y, type = "l")
+plot(x, y, type = "l") #Graficar en el eje x la secuencia y en el eje y la funcion. 
 
 ### Distribuciones en R ###
 x <- seq(from = -10, to = 10, by = 0.01)
