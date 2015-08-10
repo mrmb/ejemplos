@@ -41,5 +41,17 @@ sample( monedas , size=1000, replace = T)
   divididas en 4. 
 "
 
+#install.packages("prob")
+library(prob)
 
+draw<-function(){
+  cartas<-cards()
+  vector<-sample(1:52,5)
+  mano <- cartas[vector,]
+  return (mano)
+}
 
+" Solución de la tarea
+  Usaremos una libreria llamada prob, esta ya contiene una funcion llamada cards que contiene 
+  todas las cartas, la mandaremos a guardar en una tabla y la retornamos. 
+"
