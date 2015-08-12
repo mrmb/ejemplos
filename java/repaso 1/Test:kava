@@ -1,0 +1,8 @@
+public class Test{
+	
+	public static void main(String[] args){
+		boolean[] arr = { true, false, true, true, false, flase };
+		int num = 1;
+		HojaDeRepaso.ejercicio3(arr , num);
+	}
+}
